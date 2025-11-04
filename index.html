@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+    <section class="main">
+        <div class="main__todo" data-js-todo>
+            <form class="todo__add-task-form todo-form" data-js-add-task-form>
+                <div class="todo__add-task-field todo-field">
+                    <label for="addTaskField" class="add-task__label todo-label">
+                        Название новое задачи:
+                    </label>
+                    <input type="text" id="addTaskField" class="add-task__input todo-input" data-js-add-task-field/>
+                </div>
+                <button 
+                    type="button" 
+                    class="todo__add-task-button button"
+                    data-js-add-task-button
+                >
+                    Добавить
+                </button>
+            </form>
+            <form class="todo__search-task-form todo-form" data-js-search-task-form>
+                <div class="todo__search-task-field todo-field">
+                    <label for="searchTaskField" class="search-task__label todo-label">
+                        Поиск задачи:
+                    </label>
+                    <input type="search" id="searchTaskField" class="search-task__input todo-input" data-js-search-task-field />
+                </div>
+            </form>
+            <div class="todo__status">
+                <div class="todo-status__info" data-js-status-bar>
+                    <h3 class="todo-status__total-tasks">
+                        Всего задач: <span data-js-total-tasks>0</span>
+                    </h3>
+                    <button class="todo-status__delete-all" type="button" data-js-delete-all-tasks>
+                        Удалить все
+                    </button>
+                </div>
+                <ul class="todo-status__list" data-js-tasks-list></ul>
+            </div>
+            <h4 class="todo__empty visually-hidden" data-js-empty-msg>
+                Задачи не найдены!
+            </h4>
+        </div>
+    </section>
+</body>
+</html>

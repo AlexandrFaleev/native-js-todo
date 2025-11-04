@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style-type: none;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.visually-hidden{
+    display: none !important;
+}
+
+.main__todo{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px gray solid;
+    border-radius: 20px;
+}
+
+.todo__add-task-form{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.todo-field{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.todo-input{
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.todo-label{
+    font-size: 16px;
+    color: rgb(0 0 0 / 70%);
+}
+
+.todo__search-task-form{
+    margin-top: 10px;
+}
+
+.button{
+    padding: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #000;
+    color: white;
+    transition: all .3s ease;
+    border-radius: 10px;
+    height: 45px;
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.todo__status{
+    margin-top: 30px;
+}
+
+.todo-status__info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.todo-status__total-tasks,
+.todo-status__delete-all{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.todo-status__delete-all{
+    text-decoration: underline;
+    transition-duration: .3s ease;
+
+    &:hover{
+        opacity: 0.7;
+    }
+}
+
+.todo-status__list{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.todo-item{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px gray solid;
+    border-radius: 5px;
+
+    &:not(:first-child){
+        margin-top: 10px;
+    }
+}
+
+.todo-item__checkbox{
+    height: 30px;
+    width: 30px;
+}
+
+.todo-item__name{
+    max-width: 200px;
+    text-wrap: wrap;
+    margin-left: 10px;
+}
+
+.todo-item__checkbox:checked + .todo-item__name{
+    text-decoration: line-through;
+}
+
+.todo-item__delete-task{
+    height: 30px;
+    width: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: auto;
+}
+
+.todo__empty{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
