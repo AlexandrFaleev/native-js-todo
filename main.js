@@ -27,7 +27,9 @@ class Todo{
         this.deleteAllButtonElement = this.rootElement.querySelector(this.selectors.deleteAllButton)
         this.tasksListElement = this.rootElement.querySelector(this.selectors.tasksList)
         this.emptyMsgElement = this.rootElement.querySelector(this.selectors.emptyMsg)
-        this.tasksArray = JSON.parse(localStorage.getItem(this.storageKey)) ?? localStorage.setItem(this.storageKey, JSON.stringify([]))
+        if( !localStorage.getItem(this.storageKey) )
+            localStorage.setItem(this.storageKey, JSON.stringify([]))
+        this.tasksArray = JSON.parse(localStorage.getItem(this.storageKey))
         this.binder()
         this.render()
     }
